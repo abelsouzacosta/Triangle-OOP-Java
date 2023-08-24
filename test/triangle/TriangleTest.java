@@ -67,12 +67,18 @@ public class TriangleTest {
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowExceptionIfASideIsNegative() {
         this.triangle = new Triangle(-1, 2, 3);
-        this.triangle.calculateArea();
+        this.triangle.calculateArea();  
     }
     
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowExceptionIfASideIsZero() {
         this.triangle = new Triangle(0, 20, 30);
+        this.triangle.calculateArea();
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionIfSidesNotFormTriangle() {
+        this.triangle = new Triangle(3, 4, 43);
         this.triangle.calculateArea();
     }
     

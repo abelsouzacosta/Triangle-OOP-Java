@@ -52,7 +52,7 @@ public class Triangle {
     }
     
     private void sidesFormTriangle() throws IllegalArgumentException {
-        if (this.a <= this.b + this.c || this.b <= this.a + this.c || this.c <= this.a + this.b) {
+        if (this.a >= this.b + this.c || this.b >= this.a + this.c || this.c >= this.a + this.b) {
             throw new IllegalArgumentException("Sides do not form a triangle");
         }
     }
@@ -63,6 +63,7 @@ public class Triangle {
     
     protected void calculateSemiPerimeter() {
         this.areSidesPositive();
+        this.sidesFormTriangle();
         this.semi_perimeter = (this.a + this.b + this.c) / 2;
     }
     
