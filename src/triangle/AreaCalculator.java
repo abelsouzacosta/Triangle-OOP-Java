@@ -15,8 +15,6 @@ public class AreaCalculator {
     public AreaCalculator() {}
     
     private void calculateSemiPerimeter(double a, double b, double c) {
-        SideValidator.areSidesPositiveValues(a, b, c);
-        SideValidator.sidesFormTriangle(a, b, c);
         this.semi_perimeter = (a + b + c) / 2;
     }
     
