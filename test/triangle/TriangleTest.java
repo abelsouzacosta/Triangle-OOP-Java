@@ -22,7 +22,25 @@ public class TriangleTest {
     
     @Before
     public void setUp() {
-        triangle = new Triangle();
+        triangle = new Triangle(1, 2, 3);
+    }
+    
+    @Test
+    public void testGetA() {
+        double result = this.triangle.getA();
+        assertEquals(1, result, 0.0f);
+    }
+    
+    @Test
+    public void testGetB() {
+        double result = this.triangle.getB();
+        assertEquals(2, result, 0.0f);
+    }
+    
+    @Test
+    public void testGetC() {
+        double result = this.triangle.getC();
+        assertEquals(3, result, 0.0f);
     }
     
     @Test
