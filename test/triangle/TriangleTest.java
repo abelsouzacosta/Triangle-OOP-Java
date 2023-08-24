@@ -64,35 +64,4 @@ public class TriangleTest {
         assertEquals(c, triangle.getC(), 0.0f);
     }
     
-    @Test(expected = IllegalArgumentException.class)
-    public void shouldThrowExceptionIfASideIsNegative() {
-        this.triangle = new Triangle(-1, 2, 3);
-        this.triangle.calculateArea();  
-    }
-    
-    @Test(expected = IllegalArgumentException.class)
-    public void shouldThrowExceptionIfASideIsZero() {
-        this.triangle = new Triangle(0, 20, 30);
-        this.triangle.calculateArea();
-    }
-    
-    @Test(expected = IllegalArgumentException.class)
-    public void shouldThrowExceptionIfSidesNotFormTriangle() {
-        this.triangle = new Triangle(3, 4, 43);
-        this.triangle.calculateArea();
-    }
-    
-    @Test
-    public void testCalculateSemiPerimeter() {
-        this.triangle = new Triangle(8, 8, 8);
-        this.triangle.calculateSemiPerimeter();
-        assertEquals(12, this.triangle.getSemiPerimeter(), 0.0f);
-    }
-    
-    @Test
-    public void testCalculateArea() {
-        this.triangle = new Triangle(4, 13, 15);
-        this.triangle.calculateArea();
-        assertEquals(24, this.triangle.getArea(), 0.0f);
-    }
 }

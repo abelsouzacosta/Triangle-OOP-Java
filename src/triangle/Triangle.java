@@ -57,29 +57,4 @@ public class Triangle {
         }
     }
     
-    protected double getSemiPerimeter() {
-        return this.semi_perimeter;
-    }
-    
-    protected void calculateSemiPerimeter() {
-        this.areSidesPositive();
-        this.sidesFormTriangle();
-        this.semi_perimeter = (this.a + this.b + this.c) / 2;
-    }
-    
-    protected double getArea() {
-        return this.area;
-    }
-    
-    protected void calculateArea() {
-        this.calculateSemiPerimeter();
-        double semi = this.getSemiPerimeter();
-        this.area = Math.sqrt(
-                semi *
-                (semi - this.getA()) *
-                (semi - this.getB()) *
-                (semi - this.getC())
-        );
-    }
-    
 }
