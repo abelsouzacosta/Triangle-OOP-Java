@@ -57,5 +57,13 @@ public class Triangle {
         }
     }
     
+    protected double getSemiPerimeter() {
+        return this.semi_perimeter;
+    }
+    
+    protected void calculateSemiPerimeter() {
+        this.areSidesPositive();
+    }
+    
     
 }

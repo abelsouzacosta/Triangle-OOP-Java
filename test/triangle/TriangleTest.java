@@ -64,4 +64,15 @@ public class TriangleTest {
         assertEquals(c, triangle.getC(), 0.0f);
     }
     
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionIfASideIsNegative() {
+        triangle = new Triangle(-1, 2, 3);
+        triangle.calculateSemiPerimeter();
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionIfASideIsZero() {
+        triangle = new Triangle(0, 20, 30);
+        triangle.calculateSemiPerimeter();
+    }
 }
