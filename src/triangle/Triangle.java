@@ -21,27 +21,27 @@ public class Triangle {
         this.c = c;
     }
     
-    public void setA(double a) {
+    protected void setA(double a) {
         this.a = a;
     }
     
-    public double getA() {
+    protected double getA() {
         return this.a;
     }
     
-    public void setB(double b) {
+    protected void setB(double b) {
         this.b = b;
     }
     
-    public double getB() {
+    protected double getB() {
         return this.b;
     }
     
-    public void setC(double c) {
+    protected void setC(double c) {
         this.c = c;
     }
     
-    public double getC() {
+    protected double getC() {
         return this.c;
     }
     
@@ -56,4 +56,6 @@ public class Triangle {
             throw new IllegalArgumentException("Sides not form a triangle");
         }
     }
+    
+    
 }
