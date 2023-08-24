@@ -75,4 +75,18 @@ public class TriangleTest {
         this.triangle = new Triangle(0, 20, 30);
         this.triangle.calculateSemiPerimeter();
     }
+    
+    @Test
+    public void testCalculateSemiPerimeter() {
+        this.triangle = new Triangle(8, 8, 8);
+        this.triangle.calculateSemiPerimeter();
+        assertEquals(12, this.triangle.getSemiPerimeter(), 0.0f);
+    }
+    
+    @Test
+    public void testCalculateArea() {
+        this.triangle = new Triangle(4, 13, 15);
+        this.triangle.calculateArea();
+        assertEquals(24, this.triangle.getArea(), 0.0f);
+    }
 }

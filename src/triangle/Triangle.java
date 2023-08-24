@@ -66,5 +66,19 @@ public class Triangle {
         this.semi_perimeter = (this.a + this.b + this.c) / 2;
     }
     
+    protected double getArea() {
+        return this.area;
+    }
+    
+    protected void calculateArea() {
+        this.calculateSemiPerimeter();
+        double semi = this.getSemiPerimeter();
+        this.area = Math.sqrt(
+                semi *
+                (semi - this.getA()) *
+                (semi - this.getB()) *
+                (semi - this.getC())
+        );
+    }
     
 }
