@@ -46,33 +46,33 @@ public class TriangleTest {
     @Test
     public void testSetA() {
         double a = 10;
-        triangle.setA(a);
+        this.triangle.setA(a);
         assertEquals(a, triangle.getA(), 0.0f);
     }
     
     @Test
     public void testSetB() {
         double b = 12;
-        triangle.setB(b);
+        this.triangle.setB(b);
         assertEquals(b, triangle.getB(), 0.0f);
     }
     
     @Test
     public void testSetC() {
         double c = 23;
-        triangle.setC(c);
+        this.triangle.setC(c);
         assertEquals(c, triangle.getC(), 0.0f);
     }
     
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowExceptionIfASideIsNegative() {
-        triangle = new Triangle(-1, 2, 3);
-        triangle.calculateSemiPerimeter();
+        this.triangle = new Triangle(-1, 2, 3);
+        this.triangle.calculateSemiPerimeter();
     }
     
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowExceptionIfASideIsZero() {
-        triangle = new Triangle(0, 20, 30);
-        triangle.calculateSemiPerimeter();
+        this.triangle = new Triangle(0, 20, 30);
+        this.triangle.calculateSemiPerimeter();
     }
 }

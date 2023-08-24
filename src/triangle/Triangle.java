@@ -63,6 +63,7 @@ public class Triangle {
     
     protected void calculateSemiPerimeter() {
         this.areSidesPositive();
+        this.semi_perimeter = (this.a + this.b + this.c) / 2;
     }
     
     
