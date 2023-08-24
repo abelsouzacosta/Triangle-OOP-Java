@@ -53,7 +53,7 @@ public class Triangle {
     
     private void sidesFormTriangle() throws IllegalArgumentException {
         if (this.a <= this.b + this.c || this.b <= this.a + this.c || this.c <= this.a + this.b) {
-            throw new IllegalArgumentException("Sides not form a triangle");
+            throw new IllegalArgumentException("Sides do not form a triangle");
         }
     }
     
