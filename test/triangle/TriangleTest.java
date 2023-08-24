@@ -22,46 +22,35 @@ public class TriangleTest {
     
     @Before
     public void setUp() {
-        triangle = new Triangle(1, 2, 3);
+        triangle = new Triangle(10, 11, 12);
     }
     
     @Test
     public void testGetA() {
         double result = this.triangle.getA();
-        assertEquals(1, result, 0.0f);
+        assertEquals(10, result, 0.0f);
     }
     
     @Test
     public void testGetB() {
         double result = this.triangle.getB();
-        assertEquals(2, result, 0.0f);
+        assertEquals(11, result, 0.0f);
     }
     
     @Test
     public void testGetC() {
         double result = this.triangle.getC();
-        assertEquals(3, result, 0.0f);
+        assertEquals(12, result, 0.0f);
     }
     
-    @Test
-    public void testSetA() {
-        double a = 10;
-        this.triangle.setA(a);
-        assertEquals(a, triangle.getA(), 0.0f);
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionIfASideIsNegative() {
+        this.triangle = new Triangle(-10, 10, 10);
     }
     
-    @Test
-    public void testSetB() {
-        double b = 12;
-        this.triangle.setB(b);
-        assertEquals(b, triangle.getB(), 0.0f);
-    }
-    
-    @Test
-    public void testSetC() {
-        double c = 23;
-        this.triangle.setC(c);
-        assertEquals(c, triangle.getC(), 0.0f);
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionIfASideIsZero() {
+        this.triangle = new Triangle(10, 0, 10);
     }
     
 }

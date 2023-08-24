@@ -28,5 +28,4 @@ public class AreaCalculatorTest {
         this.calculator.calculateArea(4, 13, 15);
         assertEquals(24, this.calculator.getArea(), 0.0f);
     }
-    
 }
