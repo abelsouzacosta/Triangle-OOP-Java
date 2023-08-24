@@ -22,12 +22,6 @@ public class AreaCalculatorTest {
     public void setUp() {
         this.calculator = new AreaCalculator();
     }
-
-    @Test
-    public void testCalculateSemiPerimeter() {
-        this.calculator.calculateSemiPerimeter(8, 8, 8);
-        assertEquals(12, this.calculator.getSemiPerimeter(), 0.0f);
-    }
     
     @Test
     public void testCalculateArea() {

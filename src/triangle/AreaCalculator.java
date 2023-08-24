@@ -14,16 +14,16 @@ public class AreaCalculator {
     
     public AreaCalculator() {}
     
+    private void calculateSemiPerimeter(double a, double b, double c) {
+        this.semi_perimeter = (a + b + c) / 2;
+    }
+    
     /**
-     * Calculate the semi perimeter of the triangle
+     * Calculate the area of triangle
      * @param a - first side of triangle
      * @param b - second side of triangle
      * @param c - third side of triangle
      */
-    protected void calculateSemiPerimeter(double a, double b, double c) {
-        this.semi_perimeter = (a + b + c) / 2;
-    }
-    
     protected void calculateArea(double a, double b, double c) {
         this.calculateSemiPerimeter(a, b, c);
         this.area = Math.sqrt(

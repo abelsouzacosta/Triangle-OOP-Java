@@ -12,8 +12,6 @@ public class Triangle {
     private double a;
     private double b;
     private double c;
-    private double semi_perimeter;
-    private double area;
     
     public Triangle(double a, double b, double c) {
         this.a = a;
